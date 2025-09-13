@@ -1,0 +1,55 @@
+name: Deploy to GitHub Pages
+
+# Trigger workflow przy każdym pushu do main OR ręcznie
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout repo
+      - uses: actions/checkout@v4
+
+      # Włącz Corepack (npm/yarn)
+      - name: Enable corepack
+        run: corepack enable
+
+      # Ustaw Node.js 20.x
+      - name: Setup Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      # Instalacja zależności
+      - name: Install dependencies
+        run: npm ci
+
+      # Budowanie Nuxt pod GitHub Pages
+      - name: Build (Nuxt for GitHub Pages)
+        env:
+          NUXT_APP_BASE_URL: "/todo-app-nuxt/"
+        run: npx nuxt build --preset github_pages
+
+      # Upload statycznych plików do deploy
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./.output/public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
