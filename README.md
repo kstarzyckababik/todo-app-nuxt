@@ -1,85 +1,20 @@
+# Todo App Nuxt
 
+Prosta aplikacja **Todo** stworzona w **Nuxt 3** i **Vue 3**, z **Tailwind CSS** dla stylów.  
 
+## Technologie użyte
 
-# Sprawdź! 
+- [Nuxt 3](https://nuxt.com/) – framework Vue do SSR i statycznych stron
+- [Vue 3](https://vuejs.org/) – reactive frontend
+- [Tailwind CSS](https://tailwindcss.com/) – utility-first CSS framework
+- GitHub Pages – hosting statyczny i automatyczny deploy przez GitHub Actions
+- GitHub Actions – automatyzacja builda i deployu
 
-https://kstarzyckababik.github.io/todo-app-nuxt/
+## Funkcje
 
-_____________________
+- Dodawanie, odznaczanie i usuwanie zadań
+- Prosty, responsywny interfejs
 
+---
 
-# Nuxt Minimal Starter
-
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
-
-## Setup
-
-Make sure to install dependencies:
-
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Działająca wersja dostępna na: [https://kstarzyckababik.github.io/todo-app-nuxt/](https://kstarzyckababik.github.io/todo-app-nuxt/)
