@@ -1,7 +1,9 @@
 
 
 
-# Sprawdź! https://kstarzyckababik.github.io/todo-app-nuxt/
+# Sprawdź! 
+
+https://kstarzyckababik.github.io/todo-app-nuxt/
 
 _____________________
 
